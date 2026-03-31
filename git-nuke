@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+RED='\033[0;31m'
+NC='\033[0m'
+
 warn() { echo -e "${RED}  ⚠${NC} $1"; }
 
 git_nuke() {
@@ -40,3 +43,5 @@ git_nuke() {
     echo "Remote branch does not exist on origin: $branch"
   fi
 }
+
+git_nuke "$@"
