@@ -15,7 +15,7 @@ git_nuke() {
   fi
 
   case "$branch" in
-    main|master|develop)
+    main|master|dev|develop|development|stage|staging)
       warn "Refusing to delete protected branch: $branch"
       return 1
       ;;
